@@ -1,8 +1,3 @@
-function getData() {
-    var item = localStorage.getItem('myCat');
-    console.log("Plugin cat name = " + item)
-}
-
 $.get(chrome.extension.getURL('/injected.js'),
     function (data) {
         window.addEventListener("message", function(event) {
