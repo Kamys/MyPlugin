@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "MyPlugin",
+  "version": "1.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "jquery-3.2.1.min.js",
+        "content.js",
+        "background.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "http://losttime.su/*"
+  ],
+  "web_accessible_resources": [
+    "injected.js"
+  ],
+  "browser_action": {
+    "default_title": "Open MyPlugin",
+    "default_popup": "popup.html"
+  }
+}
